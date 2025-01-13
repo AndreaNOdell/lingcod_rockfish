@@ -47,10 +47,10 @@ save(rockfish, file = "cleaned_data/rockfish_parms.Rdata")
 # From 2017 stock assessment
 age = 1:20 # age classes
 # Length/weight parameters
-Linf = c(117.7, 76.86) # Linf values for lingcod (north) from stock assessment
-k = c(0.128, 0.301) # growth rate coefficient for lingcod (north) from stock assessment
-a = c(2.76*10^-6, 1.61*10^-6) # allometric scaling parameter
-b = c(3.28, 3.42) # allometric scaling parameter
+Linf = c(100.9, 86.3) # Linf values for lingcod (south) from stock assessment
+k = c(0.191, 0.214) # growth rate coefficient for lingcod (south) from stock assessment
+a = c(3.308*10^-6, 2.179*10^-6) # allometric scaling parameter
+b = c(3.248, 3.36) # allometric scaling parameter
 names(Linf) = names(k) = names(a) = names(b) = c("female", "male")
 
 # Calculate length at age in cm
@@ -83,11 +83,11 @@ harvest.slot[harvest.slot>min.vulnerable.length & harvest.slot<max.allow.length]
 lingcod = list(length.at.age = length.at.age, # vector of length at age
                weight.at.age = weight.at.age, # vector of weight at age
                mat.at.age = mat.at.age, # vector of maturity at age
-               nat.mort = c(0.26, 0.30), # Natural mortality estimate
-               h = 0.7,# Steepness
+               nat.mort = c(0.18, 0.32), # Natural mortality estimate
+               h = 0.8,# Steepness
                age = age, #age classes
                nage = length(age), # of age classes
-               r0 = 8664,  # recruitment at unfished biomass
+               r0 = 4848,  # recruitment at unfished biomass
                min.selectivity = min.selectivity,
                harvest.slot = harvest.slot
 )
