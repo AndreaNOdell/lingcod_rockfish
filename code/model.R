@@ -2,7 +2,7 @@
 library(deSolve) 
 library(tidyverse)
 library(purrr)
-source("scripts/functions.R")
+source("code/functions.R")
 
 
 # numerical estimation of continuous model between time step t and t+1 ---------------------

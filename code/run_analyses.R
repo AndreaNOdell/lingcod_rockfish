@@ -1,7 +1,7 @@
 # load in data and functions ---------------------
 load("cleaned_data/lingcod_parms.Rdata")
 load("cleaned_data/rockfish_parms.Rdata")
-source("scripts/model.R")
+source("code/model.R")
 library(parallel)
 
 
